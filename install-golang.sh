@@ -1,5 +1,7 @@
 #!/bin/bash
 
+GOVERSION=1.21.3
+
 case $(uname -m) in
     aarch64)
         ;&
@@ -15,6 +17,7 @@ case $(uname -m) in
         ;;
 esac
 
-rm -f go1.21.3.linux-${ARCH}.tar.gz
-wget https://go.dev/dl/go1.21.3.linux-${ARCH}.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.3.linux-${ARCH}.tar.gz
+rm -f go${GOVERSION}.linux-${ARCH}.tar.gz
+wget https://go.dev/dl/go${GOVERSION}.linux-${ARCH}.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go${GOVERSION}.linux-${ARCH}.tar.gz
+rm -f go${GOVERSION}.linux-${ARCH}.tar.gz

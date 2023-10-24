@@ -1,15 +1,5 @@
 #!/bin/bash
 
-rm -rf node-addon/golib.a node-addon/golib.h node-app/node_modules
-
-pushd golib || exit 1
-./build.sh || exit 1
-popd || exit 1
-
-pushd node-addon || exit 1
-npm install || exit 1
-popd || exit 1
-
 pushd node-app || exit 1
 npm install || exit 1
 
