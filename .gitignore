@@ -1,0 +1,5 @@
+node-addon/golib*
+node-addon/build
+node-addon/node_modules
+golib/*.tar.gz
+node-app/node_modules
